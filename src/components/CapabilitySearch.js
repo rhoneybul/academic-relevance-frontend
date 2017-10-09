@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import SearchResults from './SearchResults';
+import SearchResults from './SearchResults';
 
 class CapabilitySearch extends Component {
 
@@ -53,13 +53,13 @@ class CapabilitySearch extends Component {
                       <br/>
                       <input type="submit" className="btn" value="Find Research Capabilities" />
                   </form>
-                  {/* <SearchResults
+                  <SearchResults
                     loading={this.state.isLoading}
                     category={"Capability"}
                     query={this.state.query}
                     searchedFor={this.state.searchedFor}
                     results={this.state.results}
-                  /> */}
+                  />
               </center>
           </div>
       );

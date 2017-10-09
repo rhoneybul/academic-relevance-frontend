@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './AcademicSearch.css';
-// import SearchResults from './SearchResults';
+import SearchResults from './SearchResults';
 
 class AcademicSearch extends Component {
 
@@ -53,13 +53,13 @@ class AcademicSearch extends Component {
                         <br/>
                         <input type="submit" className="btn" value="Find Relevant Academics" />
                     </form>
-                    {/* <SearchResults
+                    <SearchResults
                       loading={this.state.isLoading}
                       category={"Academics"}
                       query={this.state.query}
                       searchedFor={this.state.searchedFor}
                       results={this.state.results}
-                    /> */}
+                    />
                 </center>
             </div>
         );

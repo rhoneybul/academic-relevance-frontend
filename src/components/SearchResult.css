@@ -1,0 +1,49 @@
+div.resultDiv {
+  margin: 10px;
+  text-align: left;
+  background-color: #c7c7c7;
+  opacity: 0.8;
+  border-radius: 15px;
+  width: 500px;
+}
+
+div.resultDiv:nth-last-child() {
+  padding-bottom: 20px;
+}
+
+h5.similarity {
+  padding-left: 60px;
+  padding-bottom: 10px;
+}
+
+h4.result {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.topTags h4{
+  font-size: 1.1em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+}
+
+div.topTagResults {
+  padding-bottom: 5px;
+}
+
+h5.tagResult {
+  margin-left: 50px;
+}
+
+a.academicLink {
+  color: black;
+  /* cursor: pointer; */
+}
+a.academicLink:hover, a.academicLink:active, a.academicLink:focus {
+  text-decoration: none;
+}
+
+/* div.resultDiv:hover {
+  opacity;
+} */

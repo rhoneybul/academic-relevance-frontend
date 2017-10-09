@@ -1,0 +1,28 @@
+h3.showingTop {
+  margin: 40px;
+}
+
+h3.loading {
+  margin: 40px;
+}
+
+h4.result {
+  margin-bottom: 0;
+  padding: 10px 10px 10px 20px;
+}
+
+h5.similarity {
+  margin-bottom: 10px;
+}
+
+h5#presented-by {
+  margin-top: 30px;
+}
+
+.loading-wheel {
+  margin-left: 10%; 
+  width: 10%;
+  position: absolute;
+  top: 300px;
+  z-index: 4;
+}
