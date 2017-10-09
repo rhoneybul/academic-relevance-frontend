@@ -1,0 +1,72 @@
+a.navbarlink {
+  margin-left: 20px;
+  color: black;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.navbarlink {
+  border-bottom: 3px solid black;
+  padding-bottom: 5px;
+}
+
+.active {
+  color: red;
+}
+
+img#menu-img {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  margin-right: 10px;
+  width: 100px;
+}
+
+.navbarlink:hover {
+  border-bottom: 3px solid yellow;
+  opacity: 0.9;
+}
+
+/* .navbarlink {
+  text-decoration: none;
+  border-bottom: 3px solid yellow;
+  color: black;
+  opacity: 0.5;
+} */
+
+/* a.navbarlinktrue#home, a.navbarlinkfalse#home {
+  color: black;
+  opacity: 1;
+} */
+
+a {
+  font-size: 0.9em;
+}
+
+a#home {
+  margin-left: 100px;
+}
+
+h4 {
+  padding: 15px 30px 25px 30px;
+  margin-top: 0;
+}
+
+div.navComponent {
+  background-color: #c7c7c7;
+  opacity: 0.8;
+  margin-top: 0;
+}
+
+div.container {
+  margin-left: 30px;
+}
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
