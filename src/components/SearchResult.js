@@ -10,7 +10,9 @@ class SearchResult extends Component {
     }
 
     academicClick(q, res) {
-        fetch('http://128.199.207.88/path/academic', {
+        // var base_url = 'http://localhost:5000'
+        var base_url = 'http://128.199.207.88'
+        fetch(base_url + '/path/academic', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -25,7 +27,9 @@ class SearchResult extends Component {
     }
 
     capabilityClick(q, tag, tag_id) {
-        fetch('http://128.199.207.88/path/capability', {
+        // var base_url = 'http://localhost:5000'
+        var base_url = 'http://128.199.207.88'
+        fetch(base_url + '/path/capability', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
