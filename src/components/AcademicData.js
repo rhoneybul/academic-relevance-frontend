@@ -13,7 +13,7 @@ class AcademicData extends Component {
     render() {
         var results = this.props.results.data;
         var name = this.props.results.name;
-        console.log(this.props.results)
+        console.log(this.props.results.data.length)
         return (
           <div>
             <h1 className="academicName">
@@ -21,6 +21,7 @@ class AcademicData extends Component {
                 {name}
               </a>
             </h1>
+            <h5 className='capabilities'>{this.props.results.data.length} Capabilities Found</h5>
             {
               results.map((result, index) => {
                 return (

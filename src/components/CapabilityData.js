@@ -18,6 +18,7 @@ class CapabilityData extends Component {
         return (
           <div>
             <h1 className='tagName'>{tag}</h1>
+            <h5 className='resultNumber'>{results.data.length} Academics with Capability</h5>
             {
               results.data.map((result, index) => {
                 return (

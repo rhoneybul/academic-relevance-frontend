@@ -20,18 +20,19 @@ class SearchResults extends Component {
             )
         }
         if(this.props.results) {
-          if (this.props.results.length === 0) {
+          console.log(this.props.results.data)
+          if (this.props.results.data.length === 0) {
             return (<h1>Cannot Find Results for {searchedFor}, check your spelling and try again.</h1>)
           } else {
             return(
                 <div>
-                    <h3 className="showingTop">Showing the Top {this.props.results.length} {this.props.category} Relating to; {searchedFor}</h3>
+                    <h3 className="showingTop">{this.props.results.data.length} Result(s) for; {searchedFor}</h3>
                     {this.props.results.data.map((result, index) => {
                         return (
-                            <SearchResult 
-                                result={result} 
+                            <SearchResult
+                                result={result}
                                 key={index}
-                                resultType={this.props.category} 
+                                resultType={this.props.category}
                                 index={index}
                                 query={searchedFor}
                             ></SearchResult>

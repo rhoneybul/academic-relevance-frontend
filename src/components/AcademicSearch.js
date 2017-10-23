@@ -6,14 +6,23 @@ class AcademicSearch extends Component {
 
     constructor(props) {
         super(props);
+
+        var initial_query = window.location.href.split('#')[1]
+
         this.state = {
-            query: '',
+            query: initial_query !== undefined ? initial_query : '',
             isLoading: false,
-            searchedFor: "",
+            searchedFor: initial_query !== undefined ? initial_query : '',
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSearch = this.handleSearch.bind(this)
+    }
+
+    componentDidMount() {
+      if (this.state.query !== '') {
+          this.handleSearch()
+      }
     }
 
     handleChange(e) {
@@ -23,7 +32,9 @@ class AcademicSearch extends Component {
     }
 
     handleSearch(e) {
-        e.preventDefault();
+        try {
+          e.preventDefault();
+        } catch(err) {}
         this.setState({
             isLoading: true
         })
@@ -34,6 +45,10 @@ class AcademicSearch extends Component {
             res => res.json()
         ).then(
             json => {
+              if (window.location.href.substring('#')) {
+                window.location.href = window.location.href.split('#')[0] + `#${this.state.query}`
+              }
+
                 this.setState({
                     isLoading: false,
                     searchedFor: this.state.query,

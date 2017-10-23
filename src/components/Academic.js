@@ -12,7 +12,6 @@ class Academic extends Component {
 
     componentDidMount() {
       var baseUrl = 'http://128.199.196.81/academics/'
-      // var baseUrl = 'http://localhost:5000/academics/'
       var query = baseUrl + encodeURIComponent(this.state.id);
       fetch(query).then(
         res => res.json()

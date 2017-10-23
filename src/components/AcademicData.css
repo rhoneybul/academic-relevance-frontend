@@ -1,3 +1,9 @@
 h5.academicResult {
   margin-left: 25px;
 }
+
+h5.capabilities {
+    margin-left: 15px;
+    padding-bottom: 3px;
+    font-size: 25px;
+}

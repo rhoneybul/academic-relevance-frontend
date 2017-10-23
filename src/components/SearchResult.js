@@ -11,7 +11,7 @@ class SearchResult extends Component {
 
     academicClick(q, res) {
         // var base_url = 'http://localhost:5000'
-        var base_url = 'http://128.199.207.88'
+        var base_url = 'http://128.199.196.81'
         fetch(base_url + '/path/academic', {
             method: 'POST',
             headers: {
@@ -28,7 +28,7 @@ class SearchResult extends Component {
 
     capabilityClick(q, tag, tag_id) {
         // var base_url = 'http://localhost:5000'
-        var base_url = 'http://128.199.207.88'
+        var base_url = 'http://128.199.196.81'
         fetch(base_url + '/path/capability', {
             method: 'POST',
             headers: {

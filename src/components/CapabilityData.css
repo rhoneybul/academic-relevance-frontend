@@ -5,3 +5,9 @@ h5.tagResult {
 h1.tagName {
   margin-bottom: 20px;
 }
+
+h5.resultNumber {
+  margin-left: 25px;
+  padding-bottom: 10px;
+  font-size: 1.3em;
+}

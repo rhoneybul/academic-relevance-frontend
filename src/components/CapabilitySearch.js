@@ -5,10 +5,13 @@ class CapabilitySearch extends Component {
 
   constructor(props) {
       super(props);
+
+      var init = window.location.href.split('#')[1]
+
       this.state={
-          query: "",
+          query: init !== undefined ? init : '',
           isLoading: false,
-          searchedFor: "",
+          searchedFor: init !== undefined ? init : '',
           results: null
       }
 
@@ -17,13 +20,22 @@ class CapabilitySearch extends Component {
   }
 
   handleChange(e) {
-      this.setState({
-          query: e.target.value
-      })
+    this.setState({
+        query: e.target.value
+    })
+  }
+
+  componentDidMount() {
+    if (this.state.query !== '') {
+      this.handleSearch()
+    }
   }
 
   handleSearch(e) {
-      e.preventDefault();
+      try {
+          e.preventDefault();
+      } catch(err) {}
+
       this.setState({
           isLoading: true
       })
@@ -34,6 +46,9 @@ class CapabilitySearch extends Component {
           res => res.json()
       ).then(
           json => {
+              if (window.location.href.substring('#')) {
+                window.location.href = window.location.href.split("#")[0] + `#${this.state.query}`
+              }
               this.setState({
                   isLoading: false,
                   searchedFor: this.state.query,
