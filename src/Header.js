@@ -41,6 +41,7 @@ class Header extends Component {
                         <Link className={"navbarlink"} id="home" to="/">Academic Relevance</Link>
                         <Link className={"navbarlink"} id='acad-search' to="/academic_search">Academic Search</Link>
                         <Link className={'navbarlink'} id='capability-search' to='/capability_search'>Capability Search</Link>
+                        <Link className={"navbarlink"} id='company-search' to='/company_search'>Company Search</Link>
                     </h4>
                 </div>
                 <div className="container">

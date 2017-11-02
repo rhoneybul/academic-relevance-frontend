@@ -43,7 +43,36 @@ class SearchResult extends Component {
         })
     }
 
+
     render() {
+        if (this.props.resultType === 'Company') {
+            const displayDescription = this.props.result["Display Description"];
+            return (
+                <div className='resultDiv'>
+                    <Link 
+                        to={"/company/"+this.props.result.symbol+","+this.props.result.market}
+
+                    >
+                    <h4>
+                        <span className="companyName">
+                            {this.props.result.Name}
+                        </span>,  
+                        <span>
+                                Symbol: {this.props.result.symbol}, Market: {this.props.result.market}
+                        </span>
+                    </h4>
+                    <p className="companyDescription">
+                        { 
+                            displayDescription.length > 150 ? 
+                                displayDescription.slice(0, 150)+'...' :
+                                displayDescription
+                        }
+                    </p>
+                    </Link>
+                    
+                </div>
+            )
+        }
         if (this.props.resultType === "Academics") {
             return (
                 <div className="resultDiv">
