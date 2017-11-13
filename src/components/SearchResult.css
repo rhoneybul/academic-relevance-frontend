@@ -7,6 +7,28 @@ div.resultDiv {
   width: 500px;
 }
 
+h4.company {
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
+
+span.companyDetails {
+  margin-left: 16px;
+  font-size: 0.8em;
+}
+
+a.companyLink {
+  text-decoration: none;
+}
+
+p.companyDescription {
+  margin-right: 40px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  font-size: 1.1em;
+}
+
 div.resultDiv:nth-last-child() {
   padding-bottom: 20px;
 }

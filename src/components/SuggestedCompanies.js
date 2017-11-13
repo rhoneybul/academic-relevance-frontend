@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SuggestedCompany from './SuggestedCompany';
+import './SuggestedCompany.css'
 
 export default class SuggestedCompanies extends Component {
   constructor(props) {
@@ -26,10 +27,10 @@ export default class SuggestedCompanies extends Component {
     if (this.state.results) {
       console.log(this.state.results)
       if (this.state.results === undefined) {
-        return (<h1>Coulnd't Find any Suggested Companies</h1>)
+        return (<h1>Couldn't Find any Suggested Companies</h1>)
       } else {
         return (
-          <div>
+          <div className='suggested_companies_container'>
             {this.state.results.map((result, index) => {
               return (
                 <SuggestedCompany

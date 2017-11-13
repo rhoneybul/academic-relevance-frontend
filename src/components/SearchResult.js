@@ -51,16 +51,18 @@ class SearchResult extends Component {
                 <div className='resultDiv'>
                     <Link 
                         to={"/company/"+this.props.result.symbol+","+this.props.result.market}
-
+                        className='companyLink'
                     >
-                    <h4>
+                    <h4 className='company'>
                         <span className="companyName">
                             {this.props.result.Name}
-                        </span>,  
-                        <span>
+                        </span>
+                        <br />
+                        <span className='companyDetails'>
                                 Symbol: {this.props.result.symbol}, Market: {this.props.result.market}
                         </span>
                     </h4>
+                    </Link>
                     <p className="companyDescription">
                         { 
                             displayDescription.length > 150 ? 
@@ -68,8 +70,6 @@ class SearchResult extends Component {
                                 displayDescription
                         }
                     </p>
-                    </Link>
-                    
                 </div>
             )
         }

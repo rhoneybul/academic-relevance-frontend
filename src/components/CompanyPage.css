@@ -1,0 +1,20 @@
+h5.company_tags {
+    width: 18%;
+    float: left;
+}
+
+div.tags_container {
+    margin-left: 5%;
+}
+
+p {
+    font-size: 1.1em;
+    margin-left: 40px;
+}
+
+h3.tag_header {
+    margin-left: 10px
+}
+h5.company_tags {
+    font-size: 1.4em;
+}

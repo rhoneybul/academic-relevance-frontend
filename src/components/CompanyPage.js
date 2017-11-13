@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 // import AcademicData from './AcademicData';
+import './CompanyPage.css';
+import {Link} from 'react-router-dom'
 
 class CompanyPage extends Component {
     constructor(props) {
@@ -38,6 +40,16 @@ class CompanyPage extends Component {
             <div>
               <h1>{this.state.results.Name}</h1>
               <p>{this.state.results["Display Description"]}</p>
+              <h3 className="tag_header">Relevant Academic Topics</h3>
+              <div className='tags_container'>
+                {this.state.results['relevant tags'].map((el, i) => {
+                  return (
+                    <Link to={'/capability/'+el[1]}>
+                      <h5 className="company_tags">{el[0]}</h5>
+                    </Link>
+                  )
+                })}
+              </div>
             </div>
           )
         }

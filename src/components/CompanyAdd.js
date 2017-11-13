@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import './CompanyAdd.css'
 
 class componentName extends Component {
   constructor(props) {
