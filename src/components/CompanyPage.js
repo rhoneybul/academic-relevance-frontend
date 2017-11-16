@@ -15,7 +15,7 @@ class CompanyPage extends Component {
       var symbol = this.state.id.split(",")[0]
       var market = this.state.id.split(",")[1]
       console.log(symbol, market)
-      var url = 'http://localhost:5000/company_data/?symbol=' + symbol + '&market=' + market;
+      var url = 'http://139.59.243.97/company_data/?symbol=' + symbol + '&market=' + market;
       console.log(url)
       fetch(url).then(
         res => res.json()

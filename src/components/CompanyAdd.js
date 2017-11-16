@@ -19,7 +19,7 @@ class componentName extends Component {
   componentDidMount() {
     const companySymbol = this.state.symbol
     const companyMarket = this.state.market
-    var QUERY_URL = 'http://localhost:5000/new_company/?symbol='+companySymbol+'&market='+companyMarket
+    var QUERY_URL = 'http://139.59.243.97/new_company/?symbol='+companySymbol+'&market='+companyMarket
     console.log(QUERY_URL)
     fetch(QUERY_URL).then(
       res => res.json()

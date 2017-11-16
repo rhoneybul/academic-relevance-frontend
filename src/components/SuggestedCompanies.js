@@ -9,7 +9,7 @@ export default class SuggestedCompanies extends Component {
     }
   }
   componentDidMount() {
-    var BASE_URL='http://localhost:5000/suggestions/'
+    var BASE_URL='http://139.59.243.97/suggestions/'
     var URL = BASE_URL + encodeURIComponent(this.props.query);
     fetch(URL).then(
       res => res.json()
