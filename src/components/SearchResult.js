@@ -49,10 +49,10 @@ class SearchResult extends Component {
             const displayDescription = this.props.result.description;
             return (
                 <div className='resultDiv'>
-                    {/* <Link 
-                        to={"/company/"+this.props.result.symbol+","+this.props.result.market}
+                    <Link 
+                        to={"/company/"+this.props.result.id}
                         className='companyLink'
-                    > */}
+                    >
                     <h4 className='company'>
                         <span className="companyName">
                             {this.props.result.name}
@@ -62,7 +62,7 @@ class SearchResult extends Component {
                                 Symbol: {this.props.result.symbol}, Market: {this.props.result.market}
                         </span> */}
                     </h4>
-                    {/* </Link> */}
+                    </Link>
                     <p className="companyDescription">
                         { 
                             displayDescription.length > 150 ? 

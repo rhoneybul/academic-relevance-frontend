@@ -7,6 +7,7 @@ export default class SuggestedCompany extends Component {
   render() {
     const result = this.props.result
     const description = result.description
+    console.log(result)
     if (description !== undefined) {
       return (
         <div className='suggested_company'>
@@ -19,7 +20,7 @@ export default class SuggestedCompany extends Component {
                   description
             }
           </p>
-          <Link to={"/addcompany/"+result.symbol+","+result.market}>
+          <Link to={"/addcompany/"+result.name+","+result.id}>
             <h4>Add Company</h4>
           </Link>
         </div>

@@ -45,9 +45,9 @@ class componentName extends Component {
         return (
           <div>
             <h1>Company Added!</h1>
-            <Link to={"/company/"+this.state.symbol+","+this.state.market}>
+            <Link to={"/company/"+this.state.id}>
               <h3>
-                Symbol: {this.state.symbol}, Market: {this.state.market}
+                  {this.state.searchString}
               </h3>
             </ Link>
           </ div>

@@ -6,6 +6,7 @@ export default class SuggestedCompanies extends Component {
   constructor(props) {
     super(props)
     this.state={
+      loading: true
     }
   }
   componentDidMount() {
@@ -17,7 +18,8 @@ export default class SuggestedCompanies extends Component {
     ).then(
       json => {
         this.setState({
-          results: json
+          results: json,
+          loading: false
         })
       }
     ).catch(
@@ -25,6 +27,11 @@ export default class SuggestedCompanies extends Component {
     )
   }
   render() {
+    if (this.state.loading) {
+      return(
+        <img className='loading-wheel' src="Rolling.gif" alt="" />
+      )
+    }
     if (this.state.results) {
       console.log(this.state.results)
       if (this.state.results === undefined) {
