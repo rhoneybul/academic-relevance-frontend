@@ -5,21 +5,23 @@ import './CompanyAdd.css'
 class componentName extends Component {
   constructor(props) {
     super(props)
-    const id = this.props.match.params.id
-    const symbol = id.split(",")[0]
-    const market = id.split(',')[1]
+    const args = this.props.match.params.id
+    const searchString = args.split(",")[0]
+    const id = args.split(',')[1]
     this.state = {
-      market: market,
-      symbol: symbol,
+      id: id,
+      searchString: searchString,
       loading: true,
     } 
 
   }
 
   componentDidMount() {
-    const companySymbol = this.state.symbol
-    const companyMarket = this.state.market
-    var QUERY_URL = 'http://139.59.243.97/new_company/?symbol='+companySymbol+'&market='+companyMarket
+    // const companySymbol = this.state.symbol
+    // const companyMarket = this.state.market
+    var BASE_URL = 'http://localhost:5000/'
+    // var BASE_URL = 'http://139.59.243.97/'
+    var QUERY_URL = BASE_URL + 'new_company/?name='+this.state.searchString+'&id='+this.state.id
     console.log(QUERY_URL)
     fetch(QUERY_URL).then(
       res => res.json()

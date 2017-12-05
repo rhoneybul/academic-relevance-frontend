@@ -46,23 +46,23 @@ class SearchResult extends Component {
 
     render() {
         if (this.props.resultType === 'Company') {
-            const displayDescription = this.props.result["Display Description"];
+            const displayDescription = this.props.result.description;
             return (
                 <div className='resultDiv'>
-                    <Link 
+                    {/* <Link 
                         to={"/company/"+this.props.result.symbol+","+this.props.result.market}
                         className='companyLink'
-                    >
+                    > */}
                     <h4 className='company'>
                         <span className="companyName">
-                            {this.props.result.Name}
+                            {this.props.result.name}
                         </span>
                         <br />
-                        <span className='companyDetails'>
+                        {/* <span className='companyDetails'>
                                 Symbol: {this.props.result.symbol}, Market: {this.props.result.market}
-                        </span>
+                        </span> */}
                     </h4>
-                    </Link>
+                    {/* </Link> */}
                     <p className="companyDescription">
                         { 
                             displayDescription.length > 150 ? 
