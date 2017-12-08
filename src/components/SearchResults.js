@@ -25,7 +25,6 @@ class SearchResults extends Component {
                 if (this.props.results.length === 0) {
                     return (
                         <div>
-                            <h3>Cannot find company, did you wish to add one of the following;</h3>
                             <SuggestedCompanies
                                 query={searchedFor}
                             ></SuggestedCompanies>

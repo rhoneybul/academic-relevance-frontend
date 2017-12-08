@@ -34,18 +34,21 @@ export default class SuggestedCompanies extends Component {
     }
     if (this.state.results) {
       console.log(this.state.results)
-      if (this.state.results === undefined) {
+      if (this.state.results.length === undefined) {
         return (<h1>Couldn't Find any Suggested Companies</h1>)
       } else {
         return (
-          <div className='suggested_companies_container'>
-            {this.state.results.map((result, index) => {
-              return (
-                <SuggestedCompany
-                  result = {result}
-                ></SuggestedCompany>
-              )
-            })}
+          <div>
+            <h1>Couldn't find company, do you wish to add one of the following;</h1>
+            <div className='suggested_companies_container'>
+              {this.state.results.map((result, index) => {
+                return (
+                  <SuggestedCompany
+                    result = {result}
+                  ></SuggestedCompany>
+                )
+              })}
+            </div>
           </div>
         )
       }

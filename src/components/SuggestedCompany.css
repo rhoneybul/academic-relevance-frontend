@@ -16,3 +16,14 @@ h3 {
 h1 {
     font-size: 31px;
 }
+
+h4.company-add {
+    text-decoration: none;
+    padding-left: 35%;
+    padding-bottom: 25px;
+    margin-top: -5px;
+}
+
+h4.company-add:hover {
+    text-decoration: none;
+}

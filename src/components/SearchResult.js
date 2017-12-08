@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './SearchResult.css';
+import {Row, Col} from 'react-bootstrap';
 
 class SearchResult extends Component {
     constructor(props) {
@@ -46,6 +47,8 @@ class SearchResult extends Component {
 
     render() {
         if (this.props.resultType === 'Company') {
+            // console.log(this.props.result);
+            const logo = this.props.result.logoUrl
             const displayDescription = this.props.result.description;
             return (
                 <div className='resultDiv'>
@@ -53,20 +56,19 @@ class SearchResult extends Component {
                         to={"/company/"+this.props.result.id}
                         className='companyLink'
                     >
-                    <h4 className='company'>
-                        <span className="companyName">
-                            {this.props.result.name}
-                        </span>
-                        <br />
-                        {/* <span className='companyDetails'>
-                                Symbol: {this.props.result.symbol}, Market: {this.props.result.market}
-                        </span> */}
-                    </h4>
+                    <Row className='company-header'>
+                        <Col xs={3}>
+                            <img id="company-logo" src={logo} alt=""/>
+                        </Col>
+                        <Col xs={9}>
+                            <h4 className='company-text'>{this.props.result.name}</h4>
+                        </Col>
+                    </Row>
                     </Link>
                     <p className="companyDescription">
                         { 
-                            displayDescription.length > 150 ? 
-                                displayDescription.slice(0, 150)+'...' :
+                            displayDescription.length > 200 ? 
+                                displayDescription.slice(0, 200)+'...' :
                                 displayDescription
                         }
                     </p>

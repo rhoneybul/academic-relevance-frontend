@@ -20,7 +20,7 @@ class Home extends Component {
           </ p>
         </div>
         </center>
-        <img src="http://static.weboffice.uwa.edu.au/visualid/sites/alpha/img/uwacrest-blue.svg" alt=""/>
+        <img id="uwa-crest" src="http://static.weboffice.uwa.edu.au/visualid/sites/alpha/img/uwacrest-blue.svg" alt=""/>
       </div>
     );
   }

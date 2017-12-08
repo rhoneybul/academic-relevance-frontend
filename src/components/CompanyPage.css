@@ -7,9 +7,28 @@ div.tags_container {
     margin-left: 5%;
 }
 
-p {
-    font-size: 1.1em;
+p.description {
+    font-size: 1.2em;
     margin-left: 40px;
+    margin-right: 40px;
+}
+
+img.company-logo {
+    position: relative;
+    height: 100px;
+    left: 42px;
+    width: auto;
+    border-radius: 10px;
+}
+
+div.company-page-header {
+    padding-top: 40px;
+}
+
+h1.company-name {
+    position: absolute;
+    top: 90px;
+    left:140px;
 }
 
 h3.tag_header {
