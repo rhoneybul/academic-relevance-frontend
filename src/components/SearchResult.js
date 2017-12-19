@@ -81,6 +81,7 @@ class SearchResult extends Component {
                     <Link to={"/academic/"+this.props.result.id}>
                         <h4 className="result">{this.props.result.name}</h4>
                     </Link>
+                    <h4 className="school">{this.props.result.school}</h4>
                     <div className="topTags">
                         <h4>Top Tags:</h4>
                         <div className="topTagResults">
@@ -99,6 +100,7 @@ class SearchResult extends Component {
             );
         }
         if (this.props.resultType === "Capability") {
+            console.log(this.props.result)
             return (
                 <div className="resultDiv">
                     <Link
@@ -108,6 +110,7 @@ class SearchResult extends Component {
                     >
                         <h4 className="result">{this.props.result.name}</h4>
                     </Link>
+                    <h4 className="school">{this.props.result.school}</h4>
                     <div className="topTags">
                         <h4>Top Tags:</h4>
                         <div className="topTagResults">

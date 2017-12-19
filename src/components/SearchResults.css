@@ -26,3 +26,8 @@ h5#presented-by {
   top: 300px;
   z-index: 4;
 }
+
+h4.school {
+  padding: 2px 5px 2px 20px;
+  font-size: 1.1em;
+}

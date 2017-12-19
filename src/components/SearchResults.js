@@ -14,6 +14,8 @@ class SearchResults extends Component {
 
         var searchedFor = this.props.searchedFor;
 
+        console.log(this.props.results)
+
         if(this.props.loading) {
             return(
                 <img className='loading-wheel' src="Rolling.gif" alt="" />
