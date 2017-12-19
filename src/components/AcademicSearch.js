@@ -39,7 +39,10 @@ class AcademicSearch extends Component {
             isLoading: true
         })
         // var baseUrl = 'http://localhost:5000/search/academics/'
-        var baseUrl = 'http://128.199.196.81/search/academics/'
+        var baseUrl = 'http://localhost:5000/search/academics/'
+        if (process.env.NODE_ENV === 'production'){
+            baseUrl = 'http://128.199.196.81/search/academics/'
+        }
         var query = baseUrl + encodeURIComponent(this.state.query);
         fetch(query).then(
             res => res.json()

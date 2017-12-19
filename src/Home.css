@@ -34,6 +34,13 @@ img {
   left: 35%;
 }
 
+img#uwa-crest {
+  position: absolute;
+  bottom: 30px;
+  width: 30%;
+  left: 35%;
+}
+
 .noSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

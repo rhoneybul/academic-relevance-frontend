@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './SearchResult.css';
+import {Row, Col} from 'react-bootstrap';
 
 class SearchResult extends Component {
     constructor(props) {
@@ -46,27 +47,28 @@ class SearchResult extends Component {
 
     render() {
         if (this.props.resultType === 'Company') {
-            const displayDescription = this.props.result["Display Description"];
+            // console.log(this.props.result);
+            const logo = this.props.result.logoUrl
+            const displayDescription = this.props.result.description;
             return (
                 <div className='resultDiv'>
                     <Link 
-                        to={"/company/"+this.props.result.symbol+","+this.props.result.market}
+                        to={"/company/"+this.props.result.id}
                         className='companyLink'
                     >
-                    <h4 className='company'>
-                        <span className="companyName">
-                            {this.props.result.Name}
-                        </span>
-                        <br />
-                        <span className='companyDetails'>
-                                Symbol: {this.props.result.symbol}, Market: {this.props.result.market}
-                        </span>
-                    </h4>
+                    <Row className='company-header'>
+                        <Col xs={3}>
+                            <img id="company-logo" src={logo} alt=""/>
+                        </Col>
+                        <Col xs={9}>
+                            <h4 className='company-text'>{this.props.result.name}</h4>
+                        </Col>
+                    </Row>
                     </Link>
                     <p className="companyDescription">
                         { 
-                            displayDescription.length > 150 ? 
-                                displayDescription.slice(0, 150)+'...' :
+                            displayDescription.length > 200 ? 
+                                displayDescription.slice(0, 200)+'...' :
                                 displayDescription
                         }
                     </p>
@@ -79,6 +81,7 @@ class SearchResult extends Component {
                     <Link to={"/academic/"+this.props.result.id}>
                         <h4 className="result">{this.props.result.name}</h4>
                     </Link>
+                    <h4 className="school">{this.props.result.school}</h4>
                     <div className="topTags">
                         <h4>Top Tags:</h4>
                         <div className="topTagResults">
@@ -97,6 +100,7 @@ class SearchResult extends Component {
             );
         }
         if (this.props.resultType === "Capability") {
+            console.log(this.props.result)
             return (
                 <div className="resultDiv">
                     <Link
@@ -106,6 +110,7 @@ class SearchResult extends Component {
                     >
                         <h4 className="result">{this.props.result.name}</h4>
                     </Link>
+                    <h4 className="school">{this.props.result.school}</h4>
                     <div className="topTags">
                         <h4>Top Tags:</h4>
                         <div className="topTagResults">

@@ -11,8 +11,10 @@ class Capability extends Component {
     }
 
     componentDidMount() {
-      var baseUrl = 'http://128.199.196.81/tags/';
-      // var baseUrl = 'http://localhost:5000/tags/';
+      var baseUrl = 'http://localhost:5000/search/tags/'
+      if (process.env.NODE_ENV === 'production'){
+          baseUrl = 'http://128.199.196.81/search/tags/'
+      };
       var query = baseUrl + encodeURIComponent(this.state.id);
       try {
         fetch(query).then(

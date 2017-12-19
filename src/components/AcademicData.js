@@ -21,6 +21,7 @@ class AcademicData extends Component {
                 {name}
               </a>
             </h1>
+            <h5 className="school">{this.props.results.school}</h5>
             <h5 className='capabilities'>{this.props.results.data.length} Capabilities Found</h5>
             {
               results.map((result, index) => {

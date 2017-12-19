@@ -41,6 +41,7 @@ class CompanySearch extends Component {
       })
       // var baseUrl = 'http://128.199.196.81/search/tag/'
       var baseUrl = 'http://localhost:5000/search/'
+    //   var baseUrl = 'http://139.59.243.97/search/'
       var query = baseUrl + encodeURIComponent(this.state.query);
       fetch(query).then(
           res => res.json()

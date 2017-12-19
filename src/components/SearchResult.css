@@ -7,6 +7,24 @@ div.resultDiv {
   width: 500px;
 }
 
+div.company-header {
+  width: 75%;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px; 
+}
+
+h4.company-text {
+  padding: 20px 0px 0px 0px;
+}
+img#company-logo {
+  position: relative;
+  bottom: 0px;
+  width: auto;
+  border-radius: 10px;
+  left: 0px;
+}
+
 h4.company {
   padding-left: 15px;
   padding-top: 15px;
@@ -23,7 +41,8 @@ a.companyLink {
 }
 
 p.companyDescription {
-  margin-right: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
   margin-bottom: 10px;
   padding-bottom: 15px;
   font-size: 1.1em;
