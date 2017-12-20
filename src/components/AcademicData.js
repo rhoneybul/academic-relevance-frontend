@@ -13,7 +13,6 @@ class AcademicData extends Component {
     render() {
         var results = this.props.results.data;
         var name = this.props.results.name;
-        console.log(this.props.results.data.length)
         return (
           <div>
             <h1 className="academicName">
