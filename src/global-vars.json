@@ -1,10 +1,10 @@
 {
     "Company" : {
         "dev": "http://localhost:8000/",
-        "production": "http://bah/"
+        "production": "http://129.199.208.75/"
     },
     "Academic": {
         "dev": "http://localhost:5000/",
-        "production": "http://bah"
+        "production": "http://139.59.104.2/"
     }
 }
