@@ -1,0 +1,10 @@
+{
+    "Company" : {
+        "dev": "http://localhost:8000/",
+        "production": "http://bah/"
+    },
+    "Academic": {
+        "dev": "http://localhost:5000/",
+        "production": "http://bah"
+    }
+}

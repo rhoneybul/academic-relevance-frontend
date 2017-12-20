@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './CompanyPage.css';
 import {Link} from 'react-router-dom'
 import {Row} from 'react-bootstrap';
+import Config from '../global-vars.json'
 
 
 class CompanyPage extends Component {
@@ -14,8 +15,10 @@ class CompanyPage extends Component {
     }
 
     componentDidMount() {
-      var BASE_URL = 'http://localhost:5000/'
-      // var BASE_URL = 'http://139.59.243.97/'
+      var BASE_URL = Config.Company.dev
+      if (process.env.NODE_ENV === "production") {
+        BASE_URL = Config.Company.production
+      }
       var url = BASE_URL + 'company_data/'+this.state.id
       fetch(url).then(
         res => res.json()

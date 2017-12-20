@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SuggestedCompany from './SuggestedCompany';
 import './SuggestedCompany.css'
+import Config from '../global-vars.json'
 
 export default class SuggestedCompanies extends Component {
   constructor(props) {
@@ -10,8 +11,11 @@ export default class SuggestedCompanies extends Component {
     }
   }
   componentDidMount() {
-    var BASE_URL='http://localhost:5000/suggestions/'
-    // var BASE_URL='http://139.59.243.97/suggestions/'
+    var BASE_URL = Config.Company.dev
+    if (process.env.NODE_ENV === "production") {
+      BASE_URL = Config.Company.production
+    }
+    BASE_URL += 'suggestions/'
     var URL = BASE_URL + encodeURIComponent(this.props.query);
     fetch(URL).then(
       res => res.json()

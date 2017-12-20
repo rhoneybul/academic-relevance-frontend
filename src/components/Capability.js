@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CapabilityData from './CapabilityData';
 import './Capability.css';
+import Config from '../global-vars.json'
 
 class Capability extends Component {
     constructor(props) {
@@ -11,10 +12,11 @@ class Capability extends Component {
     }
 
     componentDidMount() {
-      var baseUrl = 'http://localhost:5000/search/tags/'
+      var baseUrl = Config.Academic.dev
       if (process.env.NODE_ENV === 'production'){
-          baseUrl = 'http://128.199.196.81/search/tags/'
+          baseUrl = Config.Academic.production
       };
+      baseUrl += 'tags/'
       var query = baseUrl + encodeURIComponent(this.state.id);
       try {
         fetch(query).then(

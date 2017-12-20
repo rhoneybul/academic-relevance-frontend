@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './CompanyAdd.css'
+import Config from '../global-vars.json';
 
 class componentName extends Component {
   constructor(props) {
@@ -17,10 +18,10 @@ class componentName extends Component {
   }
 
   componentDidMount() {
-    // const companySymbol = this.state.symbol
-    // const companyMarket = this.state.market
-    var BASE_URL = 'http://localhost:5000/'
-    // var BASE_URL = 'http://139.59.243.97/'
+    var BASE_URL = Config.Company.dev
+    if (process.env.NODE_ENV === 'production') {
+      BASE_URL = Config.Company.production
+    }
     var QUERY_URL = BASE_URL + 'new_company/?name='+this.state.searchString+'&id='+this.state.id
     console.log(QUERY_URL)
     fetch(QUERY_URL).then(

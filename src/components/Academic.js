@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AcademicData from './AcademicData';
 import './Academic.css';
+import Config from '../global-vars.json';
 
 class Academic extends Component {
     constructor(props) {
@@ -11,10 +12,11 @@ class Academic extends Component {
     }
 
     componentDidMount() {
-      var baseUrl = 'http://localhost:5000/academics/'
+      var baseUrl = Config.Academic.dev
       if (process.env.NODE_ENV === 'production'){
-          baseUrl = 'http://128.199.196.81/academics/'
+          baseUrl = Config.Academic.production
       }
+      baseUrl += 'academics/'
       var query = baseUrl + encodeURIComponent(this.state.id);
       fetch(query).then(
         res => res.json()

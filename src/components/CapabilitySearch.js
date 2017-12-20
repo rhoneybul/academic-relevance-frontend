@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchResults from './SearchResults';
+import Config from '../global-vars.json'
 
 class CapabilitySearch extends Component {
 
@@ -39,11 +40,11 @@ class CapabilitySearch extends Component {
       this.setState({
           isLoading: true
       })
-      var baseUrl = 'http://localhost:5000/search/tag/'
+      var baseUrl = Config.Academic.dev
         if (process.env.NODE_ENV === 'production'){
-            baseUrl = 'http://128.199.196.81/search/tag/'
+            baseUrl = Config.Academic.production
         }
-      var query = baseUrl + encodeURIComponent(this.state.query);
+      var query = baseUrl + 'search/tag/' + encodeURIComponent(this.state.query);
       fetch(query).then(
           res => res.json()
       ).then(

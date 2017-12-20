@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './AcademicSearch.css';
 import SearchResults from './SearchResults';
+import Config from '../global-vars.json'
 
 class AcademicSearch extends Component {
 
@@ -38,12 +39,12 @@ class AcademicSearch extends Component {
         this.setState({
             isLoading: true
         })
-        // var baseUrl = 'http://localhost:5000/search/academics/'
-        var baseUrl = 'http://localhost:5000/search/academics/'
+        console.log(Object.keys(Config))
+        var baseUrl = Config.Academic.dev
         if (process.env.NODE_ENV === 'production'){
-            baseUrl = 'http://128.199.196.81/search/academics/'
+            baseUrl = Config.Academic.production
         }
-        var query = baseUrl + encodeURIComponent(this.state.query);
+        var query = baseUrl + 'search/academics/' + encodeURIComponent(this.state.query);
         fetch(query).then(
             res => res.json()
         ).then(
@@ -62,6 +63,7 @@ class AcademicSearch extends Component {
     }
 
     render() {
+        console.log(process.env)
         return (
             <div>
                 <center>

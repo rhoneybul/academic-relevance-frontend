@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchResults from './SearchResults';
+import Config from '../global-vars.json';
 
 class CompanySearch extends Component {
 
@@ -39,10 +40,12 @@ class CompanySearch extends Component {
       this.setState({
           isLoading: true
       })
-      // var baseUrl = 'http://128.199.196.81/search/tag/'
-      var baseUrl = 'http://localhost:5000/search/'
-    //   var baseUrl = 'http://139.59.243.97/search/'
-      var query = baseUrl + encodeURIComponent(this.state.query);
+      var BASE_URL = Config.Company.dev
+      if (process.env.NODE_ENV === "production") {
+        BASE_URL = Config.Company.production
+      }
+      BASE_URL += 'search/'
+      var query = BASE_URL + encodeURIComponent(this.state.query);
       fetch(query).then(
           res => res.json()
       ).then(

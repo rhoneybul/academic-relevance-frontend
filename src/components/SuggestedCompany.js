@@ -31,18 +31,6 @@ export default class SuggestedCompany extends Component {
               <h4 className="company-add">Add Company</h4>
             </Link>
         </div>
-        // <div className='suggested_company'>
-        //   <h1>{result.name}</h1>
-        //   {/* <h3>Symbol: {result.symbol}, Market: {result.market}</h3> */}
-        //   <p>
-        //     { 
-        //       description.length > 150 ? 
-        //           description.slice(0, 150)+'...' :
-        //           description
-        //     }
-        //   </p>
-
-        // </div>
       )
     }
     return <div></div>
